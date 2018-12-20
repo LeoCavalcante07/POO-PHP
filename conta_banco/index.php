@@ -18,6 +18,8 @@
 
                 $c1->sacar(150);
 
+                $c1->depositar(50);
+
                 $c1->fecharConta();
 
 

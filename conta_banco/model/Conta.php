@@ -88,14 +88,17 @@
         
         public function abrirConta(){
             $this->status = true;
+            
         }
         
         
         public function fecharConta(){
             if($this->saldo == 0){
                 $this->status = false;    
+            }else if($this->saldo>0){
+                echo( "<p>há dinheiro na conta</p>");
             }else{
-                return "<script>alert('aaaaaaa')<script>";
+                echo( "<p>há debito na conta</p>");
             }
             
         }
