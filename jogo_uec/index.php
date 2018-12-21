@@ -8,6 +8,7 @@
     <body>
         <?php
             require_once("Lutador.php");
+            require_once("Luta.php");
         
         
             $lutadores = array();
@@ -25,14 +26,12 @@
             $lutadores[5]  = new Lutador("Nedaart", "Jandira", 28, 1.75, 99.5, 11, 2, 1);
         
         
+
+            $luta1 = new Luta();
+            $luta1->marcarLuta($lutadores[5], $lutadores[4]);
+            $luta1->lutar();
         
-        
-        
-        
-            $lutadores[5]->apresentar();
-        
-            $lutadores[5]->status();
-        
+
         ?>
     </body>
 </html>
