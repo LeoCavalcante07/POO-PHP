@@ -8,8 +8,11 @@
         private $totAssistido;
         
         
-        function viuMaisUm(){
-            
+ 
+        function Gafanhoto($nome, $idade, $sexo, $login){
+            parent::Pessoa($nome, $idade, $sexo);
+            $this->login = $login;
+            $this->totAssistido = 0;
         }
         
         
@@ -24,13 +27,23 @@
         
         
         function getTotAssistido(){
-            return $this->login;
+            return $this->totAssistido;
         }
         
         
         function setTotAssistido($totAssistido){
             $this->totAssistido = $totAssistido;
+        }   
+        
+        
+        
+        function viuMaisUm(){
+            $this->totAssistido++;
         }        
+        
+        function ganharExp($p){
+            $this->experiencia += $p;
+        }
         
     }
     

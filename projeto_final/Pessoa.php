@@ -7,6 +7,12 @@
         protected $experiencia;
         
         
+        function Pessoa($nome, $idade, $sexo){
+            $this->nome = $nome;            
+            $this->idade = $idade;
+            $this->sexo = $sexo;
+        }
+        
         function getNome(){
             return $this->nome;
         }
@@ -54,7 +60,9 @@
         
         
         
-        abstract ganharExp();
+        protected  function ganharExp($n){
+            $this->experiencia += $n;
+        }
             
             
             
